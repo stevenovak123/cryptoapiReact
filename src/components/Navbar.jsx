@@ -25,15 +25,15 @@ export const Navbar = () => {
 	}
 
 	return (
-		<nav className='rounded-div flex items-center justify-between h-20 font-bold '>
-			<Link to='/'>
+		<nav className='rounded-div flex items-center justify-between h-20 font-bold z-50 top-0 sticky'>
+			<Link onClick={handleMenuToggle} to='/'>
 				<h1 className='text-2xl'>CryptoBase</h1>
 			</Link>
-			<div className='hidden md:block'>
+			<div className='hidden md:block z-50 '>
 				<ThemeToggle />
 			</div>
 			{user?.email ? (
-				<div className='hidden md:block'>
+				<div className='hidden md:block z-50 '>
 					<Link to='/account' className='p-4'>
 						Account
 					</Link>
